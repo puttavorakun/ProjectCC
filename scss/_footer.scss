@@ -1,0 +1,48 @@
+footer.sticky-footer {
+  display: flex;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: calc(100% - #{$sidebar-collapsed-width});
+  height: $sticky-footer-height;
+  background-color: $gray-200;
+  .copyright {
+    line-height: 1;
+    font-size: 0.8rem;
+  }
+  @media (min-width: 768px) {
+    width: calc(100% - #{$sidebar-base-width});
+  }
+}
+
+body.sidebar-toggled {
+  footer.sticky-footer {
+    width: 100%;
+  }
+  @media (min-width: 768px) {
+    footer.sticky-footer {
+      width: calc(100% - #{$sidebar-collapsed-width});
+    }
+  }
+}
+
+@import "compass/css3";
+
+.progress {
+  width: 100%;
+  height: 50px;
+}
+.progress-wrap {
+  background: #f80;
+  margin: 20px 0;
+  overflow: hidden;
+  position: relative;
+  .progress-bar {
+    background: #ddd;
+    left: 0;
+    position: absolute;
+    top: 0;
+  }
+}
+
+
